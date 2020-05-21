@@ -1,8 +1,5 @@
 #!/bin/bash
-sudo su
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt update && sudo apt install docker-ce -y
+sudo su && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && sudo apt update && sudo apt install docker-ce -y
 sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 sudo apt-get update && sudo apt-get install -y apt-transport-https && curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
