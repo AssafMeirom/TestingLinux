@@ -9,5 +9,5 @@ spec:
     - ReadWriteOnce
     - ReadOnlyMany
   persistentVolumeReclaimPolicy: Retain
-
+  hostPath:
     path: /bitnami/mariadb
