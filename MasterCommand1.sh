@@ -13,4 +13,4 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 sudo sed -i -e 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
 sudo sed -i -e 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 sudo service sshd restart
-sudo kubeadm token create --print-join-command > /home/ubuntu/yoni.bash
+sudo kubeadm token create --print-join-command > /home/ubuntu/yoni.sh
